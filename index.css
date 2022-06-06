@@ -1,0 +1,27 @@
+.title-image {
+	width: 100%;
+
+}
+
+:root {
+	--main-text:  72pt;
+}
+
+.header {
+	display: grid;
+	place-items: center;
+	grid-template-areas: "inner-div";
+	background-image: url(Images/TitleImage.jpg);
+	height:  25vh;
+}
+
+.inner-header {
+	grid-area: "inner-div";
+	display: flex;
+	flex-direction: column;
+}
+
+.title-text {
+	text-align: center;
+	font-size: var(--main-text);
+}

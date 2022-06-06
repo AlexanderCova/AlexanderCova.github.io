@@ -1,27 +1,39 @@
-.title-image {
-	width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Roboto:wght@300&display=swap');
 
-}
 
 :root {
 	--main-text:  72pt;
+	--clr : #fc1e7d;
 }
 
 .header {
-	display: grid;
-	place-items: center;
-	grid-template-areas: "inner-div";
-	background-image: url(Images/TitleImage.jpg);
-	height:  25vh;
+	background-image: url(Images/AbstractTitle.jpg);
+	background-size: cover;
+	height: auto;
+	padding: 5%;
 }
 
 .inner-header {
-	grid-area: "inner-div";
+	
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .title-text {
-	text-align: center;
+	
 	font-size: var(--main-text);
+	color: var(--clr);
+	font-family: 'Lato', sans-serif;
+}
+
+.phone-icon:hover, .phone-icon:active {
+	animation-name: rotation;
+	animation-duration: 1s;
+}
+
+@keyframes rotation {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(359deg);}
 }

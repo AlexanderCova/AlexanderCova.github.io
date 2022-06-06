@@ -6,6 +6,10 @@
 	--clr : #fc1e7d;
 }
 
+body {
+	background-color: rgb(1, 0, 57);
+}
+
 .header {
 	background-image: url(Images/AbstractTitle.jpg);
 	background-size: cover;
@@ -22,16 +26,21 @@
 }
 
 .title-text {
-	
-	font-size: var(--main-text);
+	text-align: center;
+	font-size: 5vw;
 	color: var(--clr);
 	font-family: 'Lato', sans-serif;
 }
 
-.phone-icon:hover, .phone-icon:active {
+#phone-icon {
 	animation-name: rotation;
-	animation-duration: 1s;
+	animation-duration: 2s;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+
 }
+
+
 
 @keyframes rotation {
 	from {transform: rotate(0deg);}

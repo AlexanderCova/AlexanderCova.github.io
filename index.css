@@ -40,6 +40,39 @@ body {
 
 }
 
+.inner-projects {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-content: center;
+
+}
+
+.left-section {
+	text-align: center;
+	padding: 5%;
+	color: var(--clr);
+	font-family: 'Lato', sans-serif;
+}
+
+.right-section {
+	text-align: center;
+	vertical-align: center;
+}
+
+
+.project-title {
+	font-size:46pt;
+}
+
+.project-desc {
+	font-size: 22ptw;
+}
+
+.mockup {
+	object-fit: contain;
+	width: 35vw;
+}
 
 
 @keyframes rotation {

@@ -5,32 +5,101 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alexander Cova</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
-	<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+	<script src="https://kit.fontawesome.com/47caed70cf.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.js"></script>
 	
 </head>
 <body>
-	<div class="header">
+
+		<div class="side-nav">
+			<a href="#home" class="logo">
+				<img class="logo-img" src="Images/Logo.png">
+				<img class="icon-img" src="Images/Icon.png">
+			</a>
+
+			<ul class="nav-links">
+				<li><a href="#about"><i class="fa-solid fa-user scrollLink"></i><p>About</p></a></li>
+				<li><a href="#projects"><i class="fa-solid fa-folder scrollLink"></i><p>Projects</p></a></li>
+				<li><a href="#resume"><i class="fa-solid fa-file scrollLink"></i><p>Resume</p></a></li>
+				<div class="active"></div>
+			</ul>
+		</div>
+
+
+	<div class="section" id="home">
+		<img class="home-img" src="Images/keyboard.jpg">
+		<h1 class="name">Alexander Cova</h1>
+		<div id="app"></div>
+
+	</div>
+
+	
+	<div class="section" id="about">
+		<h1 style="text-align: center;">About</h1>
+
+		<div class="inner-about">
+			<p class="about-text" >Throughout my life, i have had many experiences. From homeschooling to competitive dance, I have grown up in a disciplined household. Starting at the age of 13 i started learning the basics of python. By the age of 16 I had finished my first full app, featuring a client, vendor, and backend in Kotlin and Python Flask. Throughout the rest of highschool I helped my father build the family food truck & entertainment bussiness. Using both my programming languages and high level math skills for accounting and infrastructure building.</p>
+		</div>
+
 		
-		<div class="inner-header">
-			<h1 class="title-text">Alexander Cova</h1>
-			<h2 class="title-text">Native Android Devloper</h2>
-			<span class="iconify" id="phone-icon" data-icon="bi:phone-fill" style="color: white;" data-width="128"></span>
-			
-		</div>
+		
+		
+
 	</div>
 
-	<div class="projects">
-		<div class="foodtruckfinder-project inner-projects">
-			<div class="left-section">
-				<h1 class="project-title">FoodTruckFinder Client</h1>
-				<p class="project-desc">The best food truck finder app, looking for a truck? Pull up this app.<br>
-				</p>
-			</div>
-			<div class="right-section">
-				<img class="mockup" src="Images/LoginMockup.png">
-			</div>
-		</div>
+	<div class="section" id ="projects">
+		<h1>Projects</h1>
 	</div>
 
+	<div class="section resume-div" id="resume">
+		<h1 style="text-align: center;">Resume</h1>
+		<iframe src="http://docs.google.com/gview?url=https://drive.google.com/file/d/15w9ZvLSiIoKdsucim5s-Ch0PbXddA9SO/view" class="resume" frameborder="0"></iframe>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+		let $root = $('html, body');
+		$('a[href^="#"]').click(function() {
+			let href = $.attr(this, 'href');
+			$root.animate({
+				scrollTop: $(href).offset().top
+			}, 300, function() {
+            window.location.hash = href;
+          });
+          return false;
+        });
+
+
+
+		var app = document.getElementById('app');
+		var typewriter = new Typewriter(app, {
+			loop: true
+		});
+		
+		typewriter.typeString('Native Android Devloper')
+			.pauseFor(1000)
+			.deleteAll()
+			.typeString('UI/UX Designer')
+			.pauseFor(1000)
+			.deleteAll()
+			.typeString('Problem Solver')
+			.pauseFor(1000)
+			.deleteAll()
+			.start();
+
+
+    </script>
 </body>
 </html>

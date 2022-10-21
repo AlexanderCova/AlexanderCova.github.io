@@ -52,15 +52,17 @@
 		<h1>Projects</h1>
 		<div class="tab-section">
 			<div class="tab">
-				<button class="tablinks" onclick="openCity(event, 'FoodTruckFinderMI')"><i class="fa-solid fa-truck" ></i><b> FoodTruckFinderMI</button>
+				<button class="tablinks" id="foodTruckFinderMiButton" onclick="openCity(event, 'FoodTruckFinderMI')"><i class="fa-solid fa-truck" ></i><b> FoodTruckFinderMI</button>
+				<!--
 				<button class="tablinks" onclick="openCity(event, 'Paris')"><b>Paris</button>
-				<button class="tablinks" onclick="openCity(event, 'Tokyo')"><b>Tokyo</button>
+				<button class="tablinks" onclick="openCity(event, 'Tokyo')"><b>Tokyo</button> 
+				-->
 			</div>
 
 			<!-- Tab content -->
 			<div id="FoodTruckFinderMI" class="tabcontent">
 				<h3>FoodTruckFinderMI</h3>
-				<p>London is the capital city of England.</p>
+				<p>FoodTruckFinderMI is a family of apps, containing a client, vendor, and soon to be web app! Vendors can use the vendor app, to create a profile, edit there information, and open with their location on the map. On the client app, you can search for your favorite trucks, view their profiles, and get directions to their current location!</p>
 
 				<img src="Images/FoodTruckFinderMI Mockup.png" id="FoodTruckFinderMI-Mockup"/>
 
@@ -118,6 +120,8 @@
           });
           return false;
         });
+
+        document.getElementById("foodTruckFinderMiButton").click();
 
 
 

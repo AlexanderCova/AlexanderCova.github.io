@@ -282,7 +282,8 @@ h1 {
   padding-top: 10px;
   padding-bottom: 0px;
   border: 1px solid #ccc;
-  
+  font-family: 'Lato', sans-serif;
+	font-weight: 400;  
   height: 450px;
 
 }
@@ -306,11 +307,12 @@ h1 {
 }
 .icon-div {
 	display: flex;
+	
 }
 
 #project-github {
 	font-size: 44px;
-	
+	color:  black;
 }
 
 
